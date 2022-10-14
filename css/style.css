@@ -1,0 +1,153 @@
+/*Cursor do mouse*/
+html#jogo {
+    cursor: url(../img/mata_mosca.png) 30 30, auto;
+}
+
+/*Animação do botão da tela GameOver*/
+@keyframes animarBtn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/*Cenário do Jogo*/
+body {
+    background: url(../img/bg.jpg) no-repeat;
+    background-size: cover; /*Preencher a tela*/
+}
+
+/*Painel inferior de informações*/
+.painel {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    width: 190px;
+    padding: 10px;
+
+    border-top: 1px solid white;
+    background-color: white;
+    opacity: 0.7;
+}
+
+/*Area das vidas*/
+.vidas {
+    float: left;
+}
+
+/*Area de cronometro*/
+.cronometro {
+    float: left;
+
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+/*Mosca grande*/
+.mosca1 {
+    width: 125px;
+}
+
+/*Mosca média*/
+.mosca2 {
+    width: 75px;
+}
+
+/*Mosca pequena*/
+.mosca3 {
+    width: 50px;
+}
+
+/*Lado A mosca olha para esquerda*/
+.ladoA {
+    transform: scalex(1);
+}
+
+/*Lado B mosca olha para direita*/
+.ladoB {
+    transform: scalex(-1);
+}
+
+/*Container para alinhamento dos itens*/
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/*Layout da area de botões*/
+#area-btn {
+    display: flex;
+    justify-content: center;
+}
+
+/*Formatar Botão*/
+#area-btn button {
+    background-color: rgb(187, 187, 16);
+    color: white;
+    border-radius: 10px;
+    border: none;
+
+    box-shadow: 1px 2px 10px black;
+
+    letter-spacing: 1px;
+    font-size: 1em;
+    text-transform: uppercase;
+
+    padding: 10px;
+
+    cursor: pointer;
+
+    animation: animarBtn 1s ease-in-out infinite alternate-reverse;
+}
+
+#area-btn button:hover {
+    background-color: #5A7997;
+    transition: all 0.7s;
+}
+
+/*Cor do botão da página index*/
+#area-btn button.btn-iniciar {
+    background-color: rgb(155, 14, 14);
+}
+
+#area-btn button.btn-iniciar:hover {
+    background-color: rgb(143, 58, 58);
+}
+
+/*Area de opções da página principal*/
+#area-opcoes {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+
+#area-opcoes select {
+    background-color: #5A7997;
+    color: white;
+    border-radius: 6px;
+
+    box-shadow: 1px 2px 6px black;
+
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+
+    padding: 5px;
+    cursor: pointer;
+}
+
+/*Quando o select estiver em foco*/
+#area-opcoes select:focus {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    border: none;
+}

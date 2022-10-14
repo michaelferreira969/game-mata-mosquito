@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--Meta Tags Obrigatórias-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Estilo-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Favicon Mosca-->
+    <link rel="shortcut icon" href="img/mosca.png" type="image/x-icon">
+    
+    <title>Game Mata Mosquito</title>
+</head>
+<body>
+    <div id="container"><!--Inicio do container-->
+
+        <div id="area-capa">
+            <img src="img/vitoria.png" alt="Você venceu">
+            <div id="area-btn">
+                <button class="btn" onclick="window.location.href = 'index.html'">
+                    Jogar Novamente
+                </button>
+            </div>
+        </div>
+
+    </div><!--Fim do container-->
+
+    <!--Adicionando música a página-->
+    <audio preload="auto" autoplay loop>
+        <source src="som_vitoria.mp3" type="audio/mp3">
+        <source src="som_vitoria.ogg" type="audio/ogg">
+    </audio>
+</body>
+</html>

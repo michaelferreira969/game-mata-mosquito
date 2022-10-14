@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br" id="jogo" >
+<head>
+    <!--Meta Tags Obrigatórias-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Estilo-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Favicon Mosca-->
+    <link rel="shortcut icon" href="img/mosca.png" type="image/x-icon">
+    
+    <title>Game Mata Mosquito</title>
+</head>
+<body id="jogo" onresize="ajustaTamanhoCenario()">
+
+    <div class="painel">
+        <div class="vidas">
+            <img id="vida1" src="img/coracao_cheio.png" alt="Coração cheio">
+            <img id="vida2" src="img/coracao_cheio.png" alt="Coração cheio">
+            <img id="vida3" src="img/coracao_cheio.png" alt="Coração cheio">
+            <img id="vida4" src="img/coracao_cheio.png" alt="Coração cheio">
+            <img id="vida5" src="img/coracao_cheio.png" alt="Coração cheio">
+        </div>
+        <div class="cronometro">Tempo restante <span id="cronometro"></span></div>
+    </div>
+    
+    <!--Script-->
+    <script src="js/script.js"></script>
+    <script>
+        /* 
+        Criando e removendo moscas a cada cilco de tempo mas
+        impedir que novas moscas sejam criadas por conta da variável
+        que é interrompida quando o tempo é menor que 0 
+        */
+        var criaMosca = setInterval(
+            function() {
+                posicaoRandom(); //limitar o surgimento dos mosquitos randomicos
+            }, tempoCriaMosca //Variável de tempo
+        );
+    </script>
+</body>
+</html>
